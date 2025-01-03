@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Auto Download</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Download</title>
+    <script>
+        window.onload = function() {
+            // URL to your deps.zip file
+            const fileURL = '/zeriondep.zip';
+            const a = document.createElement('a');
+            a.href = fileURL;
+            a.download = 'zeriondep.zip'; // Optional: Set a custom filename for the download
+            a.click();
+        }
+    </script>
 </head>
 <body>
-    <script>
-        window.onload = function () {
-            const link = document.createElement('a');
-            link.href = '/zeriondep.zip';
-            link.download = 'zeriondep.zip';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        };
-    </script>
+    <h1>Downloading Dependencies...</h1>
 </body>
 </html>
